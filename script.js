@@ -194,5 +194,44 @@ function buyEntry() {
         alert("Success! Your Unique Welcome is Activated.");
     }
 }
+// --- SANTHU EMPIRE: LUDO BOARD & DICE SYSTEM ---
+
+function startGame() {
+    // 1. Board area ko screen par dikhana
+    const clubCard = document.querySelector('.club-card');
+    
+    clubCard.innerHTML = `
+        <h3 style="color:gold; margin-bottom:10px;">LUDO EMPIRE BOARD</h3>
+        <div id="ludo-board" style="width:280px; height:280px; margin:0 auto; background:#fff; display:grid; grid-template-columns:repeat(15, 1fr); grid-template-rows:repeat(15, 1fr); border:4px solid #333;">
+            <div style="grid-column:1/7; grid-row:1/7; background:#ff4d4d; border:1px solid #000;"></div>
+            <div style="grid-column:10/16; grid-row:1/7; background:#ffeb3b; border:1px solid #000;"></div>
+            <div style="grid-column:1/7; grid-row:10/16; background:#4caf50; border:1px solid #000;"></div>
+            <div style="grid-column:10/16; grid-row:10/16; background:#2196f3; border:1px solid #000;"></div>
+            <div style="grid-column:7/10; grid-row:7/10; background:gold; font-size:10px; display:flex; align-items:center; justify-content:center; color:black; font-weight:bold;">SANTHU</div>
+        </div>
+        
+        <div style="margin-top:20px; background:rgba(0,0,0,0.5); padding:10px; border-radius:15px; border:1px solid gold;">
+            <span id="dice-result" style="font-size:40px; display:block; margin-bottom:10px;">🎲</span>
+            <button class="btn-empire" onclick="rollDiceReal()" style="padding:8px 20px; font-size:16px;">Roll Dice</button>
+        </div>
+    `;
+}
+
+function rollDiceReal() {
+    // Dice animation aur result
+    let roll = Math.floor(Math.random() * 6) + 1;
+    let diceIcons = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+    
+    const diceDisplay = document.getElementById('dice-result');
+    diceDisplay.style.transform = "rotate(360deg)";
+    diceDisplay.style.transition = "0.3s";
+    
+    setTimeout(() => {
+        diceDisplay.innerText = diceIcons[roll];
+        diceDisplay.style.transform = "rotate(0deg)";
+        console.log("Santhu Empire: Dice Rolled " + roll);
+    }, 200);
+}
+
 
 
