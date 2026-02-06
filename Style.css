@@ -1,0 +1,116 @@
+/* --- SANTHU EMPIRE ROYAL THEME --- */
+
+body {
+    background-color: #050505; /* Deep Black */
+    color: #FFD700; /* Royal Gold */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Branding */
+.header {
+    width: 100%;
+    padding: 30px 0;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+    border-bottom: 3px solid #FFD700;
+    box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 2px 2px 10px #FFD700;
+}
+
+/* Wallet Section (Tokens & Diamonds) */
+.wallet-bar {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.currency-item {
+    background: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #FFD700;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.token-icon { color: #FFD700; margin-right: 8px; } /* Gold Coin */
+.diamond-icon { color: #00e5ff; margin-right: 8px; } /* Blue Diamond */
+
+/* Official Club Level 30 Card */
+.club-card {
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-card::before {
+    content: "LEVEL 30";
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    background: #FFD700;
+    color: black;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 15 Mics Grid */
+.mics-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.mic-slot {
+    width: 40px;
+    height: 40px;
+    background: #444;
+    border-radius: 50%;
+    border: 1px solid #666;
+}
+
+.mic-slot.active {
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+/* Premium Buttons */
+.btn-empire {
+    background: linear-gradient(45deg, #FFD700, #b8860b);
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.btn-empire:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FFD700;
+}
