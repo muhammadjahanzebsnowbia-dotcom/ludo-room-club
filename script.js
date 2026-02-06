@@ -148,4 +148,39 @@ const GameOptions = {
 
 // Integration Logic
 console.log("Game Options Module: LOADED ✅");
+// --- ADD THIS TO YOUR CURRENCY MODULE IN SCRIPT.JS ---
+
+const SanthuEconomy = {
+    // 1. STARTING DIET (Initial Balance)
+    startingBalance: {
+        tokens: 80,       // Free coins for playing
+        diamonds: 10,     // Premium currency (Start bonus)
+        activityPoints: 0 // Earned by staying in rooms
+    },
+
+    // 2. TOKEN USAGE (Game Bets)
+    tokenBets: [500, 2000, 5000, 10000], // Ludo game ki table fees
+
+    // 3. DIAMOND PURCHASES (Luxury Items)
+    diamondStore: {
+        customWelcome: 50000,  // Jo aapne 50k wala entry bola tha
+        vipTag: 5000,         // Special Glowing Tag
+        voiceChanger: 2000,   // Unlimited use for 24 hours
+        magicDice: 500        // One-time use in game
+    },
+
+    // 4. EARNING METHODS (Tokens kaise kamayein?)
+    earning: {
+        dailyCheckIn: 100,     // Rozana login par
+        levelUpBonus: 1000,    // Har level barhne par tokens
+        treasureLoot: "Random 50-500 Tokens" // Room mein box se
+    }
+};
+
+// Logic to show balance on screen
+function updateWalletUI(tokens, diamonds) {
+    console.log("Tokens: " + tokens + " | Diamonds: " + diamonds);
+    // Ye function HTML mein balance show karega
+}
+
 
