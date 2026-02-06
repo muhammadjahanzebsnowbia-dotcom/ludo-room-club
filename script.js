@@ -194,7 +194,8 @@ function buyEntry() {
         alert("Success! Your Unique Welcome is Activated.");
     }
 }
-// --- SANTHU EMPIRE: LUDO BOARD & DICE SYSTEM ---
+
+
 
 function startGame() {
     // 1. Board area ko screen par dikhana
