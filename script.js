@@ -233,6 +233,37 @@ function rollDiceReal() {
         console.log("Santhu Empire: Dice Rolled " + roll);
     }, 200);
 }
+// --- SANTHU EMPIRE: OWNER VIP POWER (ADD TO END) ---
+
+// 1. Owner Identification
+const adminConfig = {
+    ownerID: "Santhu_001",
+    isSupreme: true
+};
+
+// 2. VIP Entry Logic
+function handleClubEntry() {
+    // Agar aap Santhu hain, to 50k ki zaroorat nahi
+    if (adminConfig.isSupreme === true) {
+        console.log("VIP Access: Santhu detected. Entry FREE! 👑");
+        alert("Welcome Supreme Owner! Aapke liye entry hamesha khuli hai.");
+        openClub(); // Seedha entry
+    } else {
+        // Baqi logon ke liye diamonds check honge
+        checkNormalUserDiamonds();
+    }
+}
+
+// 3. Level 0 Reset (For Public Display)
+function resetPublicLevel() {
+    userData.level = 0;
+    document.getElementById('level').innerText = "0";
+    console.log("Santhu Empire: Public Level set to 0.");
+}
+
+// Initialize on Load
+resetPublicLevel();
+
 
 
 
