@@ -100,3 +100,52 @@ const SanthuEmpireGlobal = {
 };
 
 // --- END OF SANTHU EMPIRE MASTER SYSTEM ---
+// --- ADD THIS TO YOUR SCRIPT.JS ---
+
+const GameOptions = {
+    // 1. LUDO MODES (Khelne ke Tariqe)
+    modes: [
+        { name: "Classic Empire", players: [2, 4], description: "Puraana Ludo style" },
+        { name: "Quick Santhu", players: [2, 4], description: "Sirf 2 gotiyan andar karni hain" },
+        { name: "Team Up Battle", players: [4], description: "2 vs 2 muqabla" }
+    ],
+
+    // 2. IN-GAME TOOLS (Khel ke dauran powers)
+    tools: {
+        voiceChanger: {
+            unlockedAtPoints: 2000,
+            options: ["Robot", "Child", "Monster", "Official Echo"]
+        },
+        magicDice: {
+            cost: 500, // Diamonds
+            chance: "High roll probability"
+        }
+    },
+
+    // 3. REVENUE & GIFTING (Diamonds aur Points)
+    gifting: {
+        normalGifts: ["Rose", "Heart", "Chocolate"],
+        luxuryGifts: {
+            "Santhu Crown": 10000, 
+            "Empire Castle": 25000,
+            "Golden Lion": 50000 // Is gift par special entry unlock hogi
+        },
+        treasureBox: {
+            spawnRate: "Every 15 minutes",
+            minLoot: 10,
+            maxLoot: 100
+        }
+    },
+
+    // 4. GAME END REWARDS (Jeetne par kya milega)
+    rewards: (winnerRank) => {
+        if (winnerRank === 1) {
+            return { points: 100, xp: 50, tag: "Winner" };
+        }
+        return { points: 10, xp: 5 };
+    }
+};
+
+// Integration Logic
+console.log("Game Options Module: LOADED ✅");
+
