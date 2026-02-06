@@ -182,5 +182,17 @@ function updateWalletUI(tokens, diamonds) {
     console.log("Tokens: " + tokens + " | Diamonds: " + diamonds);
     // Ye function HTML mein balance show karega
 }
+function startGame() {
+    alert("Santhu Empire: Ludo Board Loading... Level 30 Access Granted!");
+}
+
+function buyEntry() {
+    let currentDiamonds = 10; // Ye baad mein database se aayega
+    if (currentDiamonds < 50000) {
+        alert("Error: 50,000 Diamonds required for Premium Entry!");
+    } else {
+        alert("Success! Your Unique Welcome is Activated.");
+    }
+}
 
 
